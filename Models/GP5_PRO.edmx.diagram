@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5523dbeb703b4c3ba27a86ab24a642c0" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="PROJECTModel.BANGCAP" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.BANGCHAMCONG" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.CHUCVU" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.HINHTHUC" Width="1.5" PointX="3.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.HOPDONG" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.LUONG" Width="1.5" PointX="8.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.PHANQUYEN" Width="1.5" PointX="6" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.PHONGBAN" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.QTCT" Width="1.5" PointX="5.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.TAIKHOAN" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROJECTModel.THUONGKILUAT" Width="1.5" PointX="6" PointY="14.5" IsExpanded="true" />
+        <AssociationConnector Association="PROJECTModel.FK__THUONGKILU__MAHT__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="PROJECTModel.FK__LUONG__MATKL__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="PROJECTModel.FK__TAIKHOAN__MAPQ__5EBF139D" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PROJECTModel.NHANVIEN" Width="1.5" PointX="3" PointY="6.625" />
+        <AssociationConnector Association="PROJECTModel.fk_manv_bangcap" />
+        <AssociationConnector Association="PROJECTModel.fk_bangchamcong" />
+        <AssociationConnector Association="PROJECTModel.fk_manv_chucvu" />
+        <AssociationConnector Association="PROJECTModel.FK__HOPDONG__MANV__3A81B327" />
+        <AssociationConnector Association="PROJECTModel.fk_manv_luong" />
+        <AssociationConnector Association="PROJECTModel.FK__TAIKHOAN__MANV__5DCAEF64" />
+        <AssociationConnector Association="PROJECTModel.fk_manv_phongban" />
+        <AssociationConnector Association="PROJECTModel.fk_manv_qtct" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

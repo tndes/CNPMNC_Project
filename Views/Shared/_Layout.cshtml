@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/style")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="header">
+        <div class="header__logo">
+            <img src="~/Image/logo.png" alt="" class="logo">
+        </div>
+        <div class="header__notifacion">
+            <div class="message">
+                <i class="fas fa-envelope"></i>
+                <div class="message_number">
+                    <span>1</span>
+                </div>
+            </div>
+            <div class="account">
+                <i class="fas fa-user-circle avartar"></i>
+                <div class="account__decentralization">
+                    <p>Xin chào, ADMIN</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding-left:0">
+        <div class="row">
+            <div class="menu col-lg-2" style="padding-right:0;padding-top:4px">
+                <div class="menu__heading">
+                    <div class="heading__avartar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="heading__text">
+                        <div class="heading__name">ADMIN</div>
+                        <div class="heading__status">
+                            <i class="fas fa-circle"></i>Online
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="menu__list" id="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link">
+                            <i class="fas fa-home"></i>Trang chủ
+                        </a>
+                    </li>
+                    <li class="menu__item--title" aria-readonly="true">
+                        DANH MỤC
+                    </li>
+                    <li class="menu__item ">
+                        <a class="menu__link">
+                            <i class="fas fa-users"></i>Tài khoản
+                        </a>
+                    </li>
+                    <li class="menu__item" id="CHUCVU">
+                        <a class="menu__link" href="@Url.Action("Index", "CHUCVUS")">
+                            <i class="fas fa-users"></i>Chức vụ
+                        </a>
+                    </li>
+                    <li class="menu__item" id="NHANVIEN" >
+                        <a class="menu__link" href="@Url.Action("Index", "NHANVIENS")">
+
+                            <i class="fas fa-user-check"></i>Nhân viên
+                        </a>
+                    </li>
+                    <li class="menu__item" id="PHONGBAN">
+                        <a class="menu__link" href="@Url.Action("Index", "PHONGBANS")">
+                            <i class="fa-solid fa-users-rectangle"></i>Phòng ban
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link">
+                            <i class="fa-solid fa-users-rectangle"></i>Bằng cấp
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link">
+                            <i class="fa-solid fa-users-rectangle"></i>Hợp đồng
+                        </a>
+                    </li>
+
+
+                    <li class="menu__item--title" aria-readonly="true">
+                        CHỨC NĂNG
+                    </li>
+                    <li class="menu__item sub__click">
+                        <label for="click--show" class="menu__link">
+                            <i class="fas fa-warehouse"></i>Bảng làm việc<i class="fas fa-chevron-down"></i>
+                        </label>
+                        <input type="checkbox" hidden id="click--show">
+                        <ul class="menu__sub" style="background-color: #212C30">
+                            <li class="menu__item">
+                                <a class="menu__link">
+                                    <i class="far fa-circle"></i>Chấm công
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">
+                                    <i class="far fa-circle"></i>Tăng ca
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">
+                                    <i class="far fa-circle"></i>Nghỉ phép
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link">
+                            <i class="far fa-calendar-check" style="font-size: 15px;"></i>Công tác
+                        </a>
+                    </li>
+
+
+                   @*<li class="menu__item sub__click"> Ctrl K C
+                        <label for="click--show2" class="menu__link">
+                            <i class="fas fa-money-check"></i>Giao dịch<i class="fas fa-chevron-down"></i>
+                        </label>
+                        <input type="checkbox" hidden id="click--show2">
+                        <ul class="menu__sub2">
+                            <li class="menu__item">
+                                <a class="menu__link">
+                                    <i class="far fa-circle"></i>Công ty đặt hàng
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">
+                                    <i class="far fa-circle"></i>Khách đặt hàng
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">
+                                    <i class="far fa-circle"></i>Hóa đơn
+                                </a>
+                            </li>
+                        </ul>
+                    </li>*@ 
+
+                <li class="menu__item">
+                    <a class="menu__link">
+                        <i class="far fa-question-circle"></i>Lương
+                    </a>
+                </li>
+
+                    <li class="menu__item--title" aria-readonly="true">
+                        KHÁC
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link">
+                            <i class="far fa-question-circle"></i>Hỗ trợ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link">
+                            <i class="fas fa-info-circle"></i>Thông tin công ty
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-10" style="padding:12px">
+                <div class="newModal" style="padding:12px;border-top:6px solid #ccc">
+                    @RenderBody()
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

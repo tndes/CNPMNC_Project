@@ -1,0 +1,124 @@
+﻿@*@model CNPMNC_Project.Models.PHONGBAN*@
+@model IEnumerable<CNPMNC_Project.Models.ChiTietPhongBan>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+@*
+    <div>
+        <h4>PHONGBAN</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TENPB)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TENPB)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TRGPB)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TRGPB)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MAPB }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+*@
+<p>
+    @*    @Html.ActionLink("Edit", "Edit", new { id  }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+
+<table class="table table-bordered table-striped" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MANV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOTENNV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIACHI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIOITINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYSINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CMND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QUEQUAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DANTOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SOBH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenCV)
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.MANV
+            </td>
+            <td>
+                @item.HOTENNV
+            </td>
+            <td>
+                @item.DIACHI
+            </td>
+            <td>
+                @item.GIOITINH
+            </td>
+            <td>
+                @item.NGAYSINH
+            </td>
+            <td>
+                @item.CMND
+            </td>
+            <td>
+                @item.QUEQUAN
+            </td>
+            <td>
+                @item.SDT
+            </td>
+            <td>
+                @item.DANTOC
+            </td>
+            <td>
+                @item.SOBH
+            </td>
+            <td>
+                @item.TenCV
+            </td>
+        </tr>
+    }
+
+
+
+</table>

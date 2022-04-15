@@ -1,0 +1,156 @@
+﻿@model CNPMNC_Project.Models.NHANVIEN
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4 style="font-weight: 700; margin-bottom: 16px; text-align:center">Chi tiết nhân viên</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.MANV)
+    <div class="container-fluid" style="padding-bottom:12px">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="user_left">
+                        <img class="avartarr" src="https://bizweb.dktcdn.net/100/392/388/products/z2805461259109-3040f96e1a6423f176aca350875cf765.jpg?v=1634188061233" />
+                        <h4>@Model.HOTENNV</h4>
+                    
+
+                </div>
+                <div style="display:flex;margin-top:9px">
+                    <input type="submit" value="Save" class="btn_save" />
+                    <button class="btn_back">
+                        @Html.ActionLink("Cancel", "Index")
+                    </button>
+                </div>
+                
+            </div>
+            <div class="col-lg-9" style="padding:18px;border:1px solid #ccc">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="user_basic user">
+                            <div class="user_title">
+                                <p>Thông tin cơ bản</p>
+                            </div>
+                            <div class="user_container">
+
+                                <div class="form-group">
+                                    <div class="form-title">Họ tên</div>
+                                    <div class="form-input">
+                                        @Html.EditorFor(model => model.HOTENNV, new { htmlAttributes = new { @class = "form-control", placeholder = "Họ tên nhân viên" } })
+                                        @Html.ValidationMessageFor(model => model.HOTENNV, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-title">Phòng ban</div>
+                                    <div class="form-input">
+                                        @Html.DropDownList("MAPB", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.MAPB, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-title">Chức vụ</div>
+                                    <div class="form-input">
+                                        @Html.DropDownList("MACV", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.MACV, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-title">Thường trú</div>
+                                    <div class="form-input">
+                                        @Html.EditorFor(model => model.DIACHI, new { htmlAttributes = new { @class = "form-control", placeholder = "Địa chỉ cư trú hiện tại" } })
+                                        @Html.ValidationMessageFor(model => model.DIACHI, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-title">Giới tính</div>
+                                    <div class="form-input">
+                                        @Html.EditorFor(model => model.GIOITINH, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.GIOITINH, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="user_personal user">
+                            <div class="user_title">
+                                <p>Thông tin cá nhân</p>
+                            </div>
+                            <div class="user_container">
+
+                                <div class="form-group">
+                                    <div class="form-title">Ngày sinh</div>
+                                    <div class="form-input">
+                                        @Html.EditorFor(model => model.NGAYSINH, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.NGAYSINH, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-title">CMND</div>
+                                    <div class="form-input">
+                                        @Html.EditorFor(model => model.CMND, new { htmlAttributes = new { @class = "form-control", placeholder = "CCCD/CMND" } })
+                                        @Html.ValidationMessageFor(model => model.CMND, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-title">Quê quán</div>
+                                    <div class="form-input">
+                                        @Html.EditorFor(model => model.QUEQUAN, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.QUEQUAN, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-title">SĐT</div>
+                                    <div class="form-input">
+                                        @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-title">Dân tộc</div>
+                                    <div class="form-input">
+                                        @Html.EditorFor(model => model.DANTOC, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.DANTOC, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-title">Số BH</div>
+                                    <div class="form-input">
+                                        @Html.EditorFor(model => model.SOBH, new { htmlAttributes = new { @class = "form-control", placeholder = "Mã số bảo hiểm y tế" } })
+                                        @Html.ValidationMessageFor(model => model.SOBH, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
